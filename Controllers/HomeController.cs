@@ -12,16 +12,10 @@ namespace Oobi.Controllers
     {
         public ActionResult Index()
         {
-            
+            //ChatGPT chatGPT = new ChatGPT();
+            //ViewBag.Response = chatGPT.ApiCall("short", "C", "math");
             return View();
-        }
-        [HttpPost]
-        public ActionResult Index(string length, string grade, string subject)
-        {
-            ChatGPT chatGPT = new ChatGPT();
-            string response = chatGPT.ApiCall(length, grade, subject);
-            
-            return View(response);
+
         }
     }
 }
