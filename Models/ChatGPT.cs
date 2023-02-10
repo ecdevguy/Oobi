@@ -56,7 +56,7 @@ namespace Oobi.Models
                     client.DefaultRequestHeaders.TryAddWithoutValidation(header.Key, header.Value);
                 }
                 var response = client.PostAsync(endpoint, new StringContent(jsonInput, Encoding.UTF8, "application/json")).Result;
-                return response.Content.ReadAsStringAsync().Result;
+                return response.Content.ReadAsStringAsync().Result; //check for error
             }
         }
     }
