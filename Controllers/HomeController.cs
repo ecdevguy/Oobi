@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Oobi.Models;
 using System;
 using System.Collections.Generic;
@@ -16,5 +17,17 @@ namespace Oobi.Controllers
             return View();
 
         }
+        [HttpPost]
+        public ActionResult ReceiveEducatorData(Educator educatorJSON)
+        {
+            
+            Educator educator = new Educator(educatorJSON.Name, educatorJSON.CourseGrade, educatorJSON.CourseLength, educatorJSON.CourseSubject);
+            
+
+            
+
+            return View();
+        }
+
     }
 }

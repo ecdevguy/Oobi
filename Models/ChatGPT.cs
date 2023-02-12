@@ -17,17 +17,15 @@ namespace Oobi.Models
         private static string endpoint = "https://api.openai.com/v1/completions";
         private static string apiKey = "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"; //need to hide this
 
-        public string ApiCall() //add Educator param and change strings to enum for Educator inputs!
+        public string ApiCall(Educator educator) //add Educator param and change strings to enum for Educator inputs!
         {
 
-            //this.length = length;
-            //this.grade = grade;
-            //this.subject = subject;
+            
 
             var input = new //add 'n' completions; add switch for max tokens & length; 'short: max tokens = 100, n = 4' 'medium: max tokens = 200, n = 2' etc.
                 {
                     model = "text-davinci-002",
-                    //prompt = $"As a teacher give {length} feedback to Alex who recieved a grade of {grade} in {subject}",
+                    prompt = $"As a teacher give {educator.CourseLength} feedback to {educator.Name} who recieved a grade of {educator.CourseGrade} in {educator.}",
                     max_tokens = 100,
                     temperature = 1
                 };
