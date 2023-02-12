@@ -18,7 +18,7 @@ namespace Oobi.Controllers
 
         }
         [HttpPost]
-        public ActionResult ReceiveEducatorData(Educator educatorJSON)
+        public ActionResult Index(Educator educatorJSON)
         {
             
             Educator educator = new Educator(educatorJSON.Name, educatorJSON.CourseGrade, educatorJSON.CourseLength, educatorJSON.CourseSubject);
