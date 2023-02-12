@@ -42,7 +42,7 @@ namespace Oobi.Models
 
         public Subject CourseSubject { get; set; }
 
-        public Educator(string name = "Alex", Grade courseGrade = Grade.A, Length courseLength = Length.Short, Subject courseSubject = Subject.Math)
+        public Educator(string name = "Alex", Grade courseGrade = Grade.A, Length courseLength = Length.Short, Subject courseSubject = Subject.Science)
 
         {
             if (Regex.IsMatch(name, @"^[a-zA-Z]+$"))
