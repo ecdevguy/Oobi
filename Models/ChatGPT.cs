@@ -17,7 +17,7 @@ namespace Oobi.Models
         private static string endpoint = "https://api.openai.com/v1/completions";
         private static string apiKey = "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"; //need to hide this
 
-        public string ApiCall(Educator educator) //add Educator param and change strings to enum for Educator inputs!
+        public List<string> ApiCall(Educator educator) //add Educator param and change strings to enum for Educator inputs!
         {
 
             
@@ -26,8 +26,9 @@ namespace Oobi.Models
                 {
                     model = "text-davinci-002",
                     prompt = $"As a teacher give {educator.CourseLength} feedback to {educator.Name} who recieved a grade of {educator.CourseGrade} in {educator.CourseSubject}",
-                    max_tokens = 100,
-                    temperature = 1
+                    max_tokens = 200,
+                    temperature = .8,
+                    n = 4
                 };
 
                 string jsonInput = JsonConvert.SerializeObject(input);
@@ -37,12 +38,12 @@ namespace Oobi.Models
                 { "Content-Type", "application/json" },
                 { "Authorization", $"Bearer {apiKey}" }
             };
-                var response = MakeApiCall(endpoint, jsonInput, headers);
-                JObject obj = JObject.Parse(response);
-                string text = (string)obj["choices"][0]["text"];
-                return text;
-            
-            
+            var response = MakeApiCall(endpoint, jsonInput, headers);
+            JObject obj = JObject.Parse(response);
+            var choices = obj["choices"].Select(c => (string)c["text"]).ToList();
+            return choices;
+
+
         }
 
         static string MakeApiCall(string endpoint, string jsonInput, Dictionary<string, string> headers)

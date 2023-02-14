@@ -37,7 +37,7 @@ namespace Oobi.Controllers
 
             ChatGPT chatGPTRequest = new ChatGPT();
             chatGPTRequest.ApiCall(educator);
-            ViewBag.Response = chatGPTRequest.ApiCall(educator);
+            ViewBag.Responses = chatGPTRequest.ApiCall(educator);
 
             return View();
         }
