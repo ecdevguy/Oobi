@@ -30,7 +30,8 @@ namespace Oobi.Models
             History,
             Science,
             Math,
-            English
+            English,
+            Mandarin
         }
 
         private readonly Guid _educatorId;
@@ -42,7 +43,7 @@ namespace Oobi.Models
 
         public Subject CourseSubject { get; set; }
 
-        public Educator(string name = "Alex", Grade courseGrade = Grade.B, Length courseLength = Length.Short, Subject courseSubject = Subject.Math)
+        public Educator(string name = "Alex", Grade courseGrade = Grade.B, Length courseLength = Length.Short, Subject courseSubject = Subject.Mandarin)
 
         {
             if (Regex.IsMatch(name, @"^[a-zA-Z]+$"))

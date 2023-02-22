@@ -26,8 +26,8 @@ namespace Oobi.Models
                 {
                     model = "text-davinci-002",
                     prompt = $"As a teacher give {educator.CourseLength} feedback to {educator.Name} who recieved a grade of {educator.CourseGrade} in {educator.CourseSubject}",
-                    max_tokens = 200,
-                    temperature = .8,
+                    max_tokens = 400,
+                    temperature = 1,
                     n = 4
                 };
 
