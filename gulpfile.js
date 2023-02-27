@@ -21,7 +21,7 @@ gulp.task('process-sass', () => {
 });
 
 gulp.task('process-js', () => {
-    return gulp.src('Scripts/js/*/*.js')
+    return gulp.src('Scripts/js/*.js')
         .pipe(webpack({
             mode: mode.development() ? 'development' : 'production',
             watch: true,
@@ -48,7 +48,7 @@ gulp.task('default', () => {
     );
 
     gulp.watch(
-        ['Scripts/js/*.js','Scripts/js/*/*.js'],
+        ['Scripts/js/*.js'],
         { ignoreInitial: false },
         gulp.series('process-js')
     );
