@@ -13,6 +13,111 @@
         <h1>
             Hi there. I&rsquo;m Oobi, an AI&ndash;powered student comment generator app for&nbsp;teachers.
         </h1>
+        <p class="subhead">We can quickly generate meaningful feedback for report cards and other student evaluations with the help of ChatGPT&nbsp;&mdash;&nbsp;so you can spend less time grading and more time with your&nbsp;students.</p>
+        <h2 class="screen-reader">Generate comments for <span data-value="another">your</span>&nbsp;student</h2>
+        <form>
+            <label for="firstName">What is your student's first&nbsp;name?</label>
+            <input id="firstName" type="text" placeholder="Enter Student's First Name">
+            <fieldset id="subject" class="select">
+                <legend>What subject are we&nbsp;grading?</legend>
+                <input type="radio" id="subjectPlaceholder" name="subject" disabled checked">
+                <label for="subjectPlaceholder">Choose a subject</label>
+                <input type="radio" id="subjectArt" name="subject" value="art">
+                <label for="subjectArt">Art</label>
+                <input type="radio" id="subjectEnglish" name="subject" value="english">
+                <label for="subjectEnglish">English</label>
+                <input type="radio" id="subjectHistory" name="subject" value="history">
+                <label for="subjectHistory">History</label>
+                <input type="radio" id="subjectMath" name="subject" value="math">
+                <label for="subjectMath">Math</label>
+                <input type="radio" id="subjectScience" name="subject" value="science">
+                <label for="subjectScience">Science</label>
+            </fieldset>
+            <fieldset id="grade" class="select">
+                <legend>What grade did they&nbsp;receive?</legend>
+                <input type="radio" id="gradePlaceholder" name="grade" disabled checked">
+                <label for="gradePlaceholder">Choose a grade</label>
+                <input type="radio" id="gradeA" name="grade" value="a">
+                <label for="gradeA">A</label>
+                <input type="radio" id="gradeB" name="grade" value="b">
+                <label for="gradeB">B</label>
+                <input type="radio" id="gradeC" name="grade" value="c">
+                <label for="gradeC">C</label>
+                <input type="radio" id="gradeD" name="grade" value="d">
+                <label for="gradeD">D</label>
+                <input type="radio" id="gradeF" name="grade" value="f">
+                <label for="gradeF">F</label>
+            </fieldset>
+            <fieldset id="commentLength" class="select">
+                <legend>How long should the comment&nbsp;be?</legend>
+                <input type="radio" id="commentLengthPlaceholder" name="commentLength" disabled checked">
+                <label for="commentLengthPlaceholder">Choose comment length</label>
+                <input type="radio" id="commentShort" name="commentLength" value="short">
+                <label for="commentShort">Short (1-2 sentences)</label>
+                <input type="radio" id="commentMedium" name="commentLength" value="medium">
+                <label for="commentMedium">Medium (2-3 sentences)</label>
+                <input type="radio" id="commentLong" name="commentLength" value="long">
+                <label for="commentLong">Long (3-4 sentences)</label>
+            </fieldset>
+            <input id="acceptTerms" type="checkbox" name="acceptTerms" value="accepted">
+            <label for="acceptTerms">I agree to the Terms and Conditions</label>
+            </div>
+            <input id="submit" type="submit" value="Try me" data-value="Get suggestions">
+        </form>
+        <h2>Here are my feedback suggestions for</h2>
+        <p id="studentName" class="h1">Alexander</p>
+        <div id="oobi">
+            <svg id="oobi-arm-back-left"></svg>
+            <svg id="oobi-arm-back-right"></svg>
+            <svg id="oobi-arm-front-left"></svg>
+            <svg id="oobi-arm-front-right"></svg>
+            <img src="" alt="Oobi the Octopus">
+        </div>
+        <div id="responses">
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+        </div>
+        <div id="background">
+            <svg class="bubbles"></svg>
+            <svg class="bubbles"></svg>
+            <svg class="bubbles"></svg>
+            <svg class="bubbles"></svg>
+            <svg class="bubbles"></svg>
+        </div>
         <script src="/Scripts/Site.js"></script>
     </body>
 </html>
