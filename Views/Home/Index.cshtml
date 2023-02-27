@@ -1,27 +1,18 @@
 ﻿@{
     Layout = null;
-    var responses = ViewBag.Responses as List<string>;
 }
-
 <!DOCTYPE html>
-
 <html>
-<head>
-    <title>Responses</title>
-</head>
-<body>
-    <h1>Responses:</h1>
-
-    @if (responses != null && responses.Count > 0)
-    {
-        foreach (var response in responses)
-        {
-            <p>@response</p>
-        }
-    }
-    else
-    {
-        <p>No responses found.</p>
-    }
-</body>
+    <head>
+        <title>
+            An AI-powered student comment generator for teachers | Oobi
+        </title>
+        <link rel="stylesheet" href="/Content/Site.css" />
+    </head>
+    <body>
+        <h1>
+            Hi there. I&rsquo;m Oobi, an AI&ndash;powered student comment generator app for&nbsp;teachers.
+        </h1>
+        <script src="/Scripts/Site.js"></script>
+    </body>
 </html>
