@@ -30,14 +30,14 @@ namespace Oobi.Controllers
         //    return View();
         //}
         [HttpPost]
-        public ActionResult Index(string name, string subject, string grade, string commentLength) //"generate feedback"
+        public ActionResult Index(string name, string subject, string grade, string length) //"generate feedback"
         {
 
             Educator educator = new Educator()
             {
                 Name = name,
                 CourseGrade = Educator.GetGradeFromString(grade),
-                CourseLength = Educator.GetLengthFromString(commentLength),
+                CourseLength = Educator.GetLengthFromString(length),
                 CourseSubject = Educator.GetSubjectFromString(subject)
             };
             
