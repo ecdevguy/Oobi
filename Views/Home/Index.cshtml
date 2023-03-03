@@ -13,9 +13,9 @@
         </title>
         <meta property="og:title" content="Oobi | An AI-powered comment generator for teachers" />
         <meta name="twitter:title" content="Oobi | An AI-powered comment generator for teachers">
-        <meta name="description" content="Oobi uses ChatGPT to help teachers save time. Generate report card comments and feedback for student evaluations in just a few clicks."/>
-        <meta property="og:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate meaningful report card comments and feedback for student evaluations." />
-        <meta name="twitter:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate meaningful report card comments and feedback for student evaluations.">
+        <meta name="description" content="Oobi uses ChatGPT to help teachers save time. Generate report card lengthS and feedback for student evaluations in just a few clicks."/>
+        <meta property="og:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate meaningful report card lengthS and feedback for student evaluations." />
+        <meta name="twitter:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate meaningful report card lengthS and feedback for student evaluations.">
 
         <meta property="og:image" content="og.png" />
         <meta name="twitter:image" content="og.png">
@@ -55,13 +55,13 @@
                 We can quickly generate meaningful feedback for report cards and other student evaluations with the help of ChatGPT&nbsp;&mdash;&nbsp;so you can spend less time grading and more time with your&nbsp;students.
                 </p>
             <h2 class="screen-reader">
-                Generate comments for <span data-value="another">your</span>&nbsp;student
+                Generate lengthS for <span data-value="another">your</span>&nbsp;student
                 </h2>
             <form>
-                <label for="firstName">
+                <label for="name">
                     What is your student's first&nbsp;name?
                     </label>
-                <input id="firstName" type="text" placeholder="Enter Student's First Name">
+                <input id="name" type="text" name="name" placeholder="Enter Student's First Name">
                 <fieldset id="subject" class="select">
                     <legend>
                         What subject are we&nbsp;grading?
@@ -120,32 +120,31 @@
                         F
                         </label>
                 </fieldset>
-                <fieldset id="commentLength" class="select">
+                <fieldset id="length" class="select">
                     <legend>
                         How long should the comment&nbsp;be?
                         </legend>
-                    <input type="radio" id="commentLengthPlaceholder" name="commentLength" disabled checked">
-                    <label for="commentLengthPlaceholder">
+                    <input type="radio" id="lengthPlaceholder" name="length" disabled checked">
+                    <label for="lengthPlaceholder">
                         Choose comment length
                         </label>
-                    <input type="radio" id="commentShort" name="commentLength" value="short">
-                    <label for="commentShort">
+                    <input type="radio" id="lengthShort" name="length" value="short">
+                    <label for="lengthShort">
                         Short (1-2 sentences)
                         </label>
-                    <input type="radio" id="commentMedium" name="commentLength" value="medium">
-                    <label for="commentMedium">
+                    <input type="radio" id="lengthMedium" name="length" value="medium">
+                    <label for="lengthMedium">
                         Medium (2-3 sentences)
                         </label>
-                    <input type="radio" id="commentLong" name="commentLength" value="long">
-                    <label for="commentLong">
+                    <input type="radio" id="lengthLong" name="length" value="long">
+                    <label for="lengthLong">
                         Long (3-4 sentences)
                         </label>
                 </fieldset>
-                <input id="acceptTerms" type="checkbox" name="acceptTerms" value="accepted">
+                <input id="acceptTerms" type="checkbox" value="accepted">
                 <label for="acceptTerms">
                     I agree to the Terms and Conditions
                     </label>
-                </div>
                 <input id="submit" type="submit" value="Try me" data-value="Get suggestions">
             </form>
             <h2>
