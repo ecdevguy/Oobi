@@ -30,7 +30,7 @@ namespace Oobi.Controllers
         //    return View();
         //}
         [HttpPost]
-        public ActionResult Index(string name, string subject, string grade, string length) //"generate feedback"
+        public JsonResult Index(string name, string subject, string grade, string length)
         {
 
             Educator educator = new Educator()
@@ -43,9 +43,10 @@ namespace Oobi.Controllers
             
             ChatGPT chatGPTRequest = new ChatGPT();
             chatGPTRequest.ApiCall(educator);
-            ViewBag.Responses = chatGPTRequest.ApiCall(educator);
+            List<string> responses = chatGPTRequest.ApiCall(educator);
 
-            return View();
+            return Json(new {responses});
+            
         }
 
     }
