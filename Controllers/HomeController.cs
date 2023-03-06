@@ -29,24 +29,23 @@ namespace Oobi.Controllers
 
         //    return View();
         //}
-        [HttpPost]
-        public JsonResult Index(string name, string subject, string grade, string length)
+        public JsonResult GetResponses(string data)
         {
-
-            Educator educator = new Educator()
-            {
-                Name = name,
-                CourseGrade = Educator.GetGradeFromString(grade),
-                CourseLength = Educator.GetLengthFromString(length),
-                CourseSubject = Educator.GetSubjectFromString(subject)
-            };
             
-            ChatGPT chatGPTRequest = new ChatGPT();
-            chatGPTRequest.ApiCall(educator);
-            List<string> responses = chatGPTRequest.ApiCall(educator);
+            //Educator educator = new Educator()
+            //{
+            //   Name = name,
+            //    CourseGrade = Educator.GetGradeFromString(grade),
+            //    CourseLength = Educator.GetLengthFromString(length),
+            //    CourseSubject = Educator.GetSubjectFromString(subject)
+            //};
 
-            return Json(new {responses});
-            
+            //ChatGPT chatGPTRequest = new ChatGPT();
+            //chatGPTRequest.ApiCall(educator);
+            //List<string> responses = chatGPTRequest.ApiCall(educator);
+
+            return Json(new { data });
+
         }
 
     }

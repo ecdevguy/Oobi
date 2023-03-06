@@ -1,16 +1,5 @@
 ﻿@{
     Layout = null;
-    //$.ajax({
-    //type: "POST",
-    //url: "/Controller/Index",
-    //data: { name: "John", subject: "Math", grade: "10", length: "Short" },
-    //success: function(result) {
-    //        // result contains the response object
-    //        var responses = result.responses;
-    //        // do something with responses
-    //    }
-    //});
-
 }
 <!DOCTYPE html>
 <html lang="en-US">
@@ -53,6 +42,7 @@
         <link rel="icon" href="favicon32.png" />
 
         <link rel="stylesheet" href="/Content/Site.css" />
+        <script src="/Scripts/jquery-3.4.1.min.js"></script>
     </head>
     <body>
         <header id="header">
@@ -70,7 +60,7 @@
             <h2 class="sr-only">
                 Generate comments for <span data-value="another">your</span>&nbsp;student
                 </h2>
-            <form id="form">
+            <form name="form" id="form" action="/Home/GetResponses" method="post">
                 <label for="name">
                     What is your student's first&nbsp;name?
                     </label>
