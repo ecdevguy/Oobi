@@ -70,10 +70,18 @@
             <h2 class="sr-only">
                 Generate comments for <span data-value="another">your</span>&nbsp;student
                 </h2>
-            <form>
-                <div class="form-field">
-                    <label for="firstName">
-                        What is your student's first&nbsp;name?
+            <form id="form">
+                <label for="name">
+                    What is your student's first&nbsp;name?
+                    </label>
+                <input id="name" type="text" name="name" placeholder="Enter Student's First Name">
+                <fieldset id="subject" class="select">
+                    <legend>
+                        What subject are we&nbsp;grading?
+                        </legend>
+                    <input type="radio" id="subjectPlaceholder" name="subject" disabled checked">
+                    <label for="subjectPlaceholder">
+                        Choose a subject
                         </label>
                     <input id="firstName" type="text" placeholder="Enter Student's First Name">
                 </div>
