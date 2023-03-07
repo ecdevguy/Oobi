@@ -1,0 +1,51 @@
+@mixin placeholder
+{
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}  
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+
+    .form-field {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: rem($base-spacing);
+    }
+}
+
+input[type="text"],
+fieldset {
+    display: block;
+    width: 100%;
+    padding: 0.75em 1em;
+    border-radius: rem(7px);
+    background: rgba(white, 0.8);
+    border: rem(3px) solid var(--secondary-cool-color);
+    color: var(--secondary-cool-color);
+}
+
+input[type="text"] {
+    @include placeholder {
+        color: var(--primary-cool-color);
+    }
+}
+
+label {
+    display: inline-block;
+    margin-bottom: rem(5px);
+}
+
+fieldset {
+    position: relative;
+    margin-top: rem(($base-font-size * 1.5) + 5px);
+    legend {
+        position: absolute;
+        bottom: calc(100% + #{rem(8px)});
+        left: 0;
+        color: var(--white);
+    }
+}
