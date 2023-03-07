@@ -20,31 +20,38 @@ namespace Oobi.Controllers
         //[HttpPost]
         //public ActionResult Index(Educator educatorJSON)
         //{
-            
+
         //    Educator educator = new Educator(educatorJSON.Name, educatorJSON.CourseGrade, educatorJSON.CourseLength, educatorJSON.CourseSubject);
-            
+
         //    ChatGPT chatGPTRequest = new ChatGPT();
         //    chatGPTRequest.ApiCall(educator);
         //    ViewBag.Response = chatGPTRequest.ApiCall(educator);
 
         //    return View();
         //}
-        public JsonResult GetResponses(string data)
+        [HttpPost]
+        public JsonResult GetResponses(string name, string subject, string grade, string length)
         {
-            
-            //Educator educator = new Educator()
-            //{
-            //   Name = name,
-            //    CourseGrade = Educator.GetGradeFromString(grade),
-            //    CourseLength = Educator.GetLengthFromString(length),
-            //    CourseSubject = Educator.GetSubjectFromString(subject)
-            //};
 
-            //ChatGPT chatGPTRequest = new ChatGPT();
-            //chatGPTRequest.ApiCall(educator);
-            //List<string> responses = chatGPTRequest.ApiCall(educator);
+            Educator educator = new Educator()
+            {
+                Name = name,
+                CourseGrade = Educator.GetGradeFromString(grade),
+                CourseLength = Educator.GetLengthFromString(length),
+                CourseSubject = Educator.GetSubjectFromString(subject)
+            };
 
-            return Json(new { data });
+            ChatGPT chatGPTRequest = new ChatGPT();
+            chatGPTRequest.ApiCall(educator);
+            List<string> data = chatGPTRequest.ApiCall(educator);
+
+            var dataDictionary = new Dictionary<int, string>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                dataDictionary[i] = data[i];
+            }
+
+            return Json(new {dataDictionary});
 
         }
 
