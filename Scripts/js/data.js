@@ -7,13 +7,19 @@ jQuery($ => {
 			type: $form.attr('method'),
 			url: $form.attr('action'),
 			data: $form.serialize(),
-			dataType: 'json',
+			dataType: 'text',
+			contentType: 'application/json',
 			success: function (response) {
-				if (response[0] == null || response[0] == '') {
-					console.log('Data returned null or empty.');
+				if (response) {
+					if (response[0] == null || response[0] == '') {
+						console.log('Data returned null or empty.');
+					} else {
+						console.log(response);
+					}
 				} else {
-					console.log(response);
+					console.log('No response at all.')
 				}
+				
 			}
 		});
 		return false;
