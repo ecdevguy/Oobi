@@ -30,7 +30,7 @@ namespace Oobi.Controllers
         //    return View();
         //}
         [HttpPost]
-        public JsonResult GetResponses(string name, string subject, string grade, string length)
+        public List<string> GetResponses(string name, string subject, string grade, string length)
         {
 
             Educator educator = new Educator()
@@ -45,14 +45,14 @@ namespace Oobi.Controllers
             chatGPTRequest.ApiCall(educator);
             List<string> data = chatGPTRequest.ApiCall(educator);
 
-            var dataDictionary = new Dictionary<int, string>();
-            for (int i = 0; i < data.Count; i++)
-            {
-                dataDictionary[i] = data[i];
-            }
+            //var dataDictionary = new Dictionary<int, string>();
+            //for (int i = 0; i < data.Count; i++)
+            //{
+            //    dataDictionary[i] = data[i];
+            //}
 
-            return Json(new {dataDictionary});
-
+            //return Json(dataDictionary);
+            return data;
         }
 
     }
