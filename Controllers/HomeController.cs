@@ -30,7 +30,7 @@ namespace Oobi.Controllers
         //    return View();
         //}
         [HttpPost]
-        public List<string> GetResponses(string name, string subject, string grade, string length)
+        public JsonResult GetResponses(string name, string subject, string grade, string length)
         {
 
             Educator educator = new Educator()
@@ -42,7 +42,7 @@ namespace Oobi.Controllers
             };
 
             ChatGPT chatGPTRequest = new ChatGPT();
-            chatGPTRequest.ApiCall(educator);
+            //chatGPTRequest.ApiCall(educator);
             List<string> data = chatGPTRequest.ApiCall(educator);
 
             //var dataDictionary = new Dictionary<int, string>();
@@ -52,7 +52,7 @@ namespace Oobi.Controllers
             //}
 
             //return Json(dataDictionary);
-            return data;
+            return Json(new {data});
         }
 
     }
