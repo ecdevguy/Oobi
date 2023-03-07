@@ -1,0 +1,14 @@
+$base-spacing: 25px;
+
+:root {
+    --base-spacing: #{rem($base-spacing)};
+}
+body {
+    padding: rem($base-spacing);
+}
+section {
+    padding: rem($base-spacing * 2) 0;
+}
+form {
+    padding: rem($base-spacing) 0;
+}
