@@ -20,9 +20,9 @@ namespace Oobi.Controllers
         //[HttpPost]
         //public ActionResult Index(Educator educatorJSON)
         //{
-            
+
         //    Educator educator = new Educator(educatorJSON.Name, educatorJSON.CourseGrade, educatorJSON.CourseLength, educatorJSON.CourseSubject);
-            
+
         //    ChatGPT chatGPTRequest = new ChatGPT();
         //    chatGPTRequest.ApiCall(educator);
         //    ViewBag.Response = chatGPTRequest.ApiCall(educator);
@@ -30,16 +30,29 @@ namespace Oobi.Controllers
         //    return View();
         //}
         [HttpPost]
-        public ActionResult Index(string name)
+        public JsonResult GetResponses(string name, string subject, string grade, string length)
         {
 
-            Educator educator = new Educator(name);
+            Educator educator = new Educator()
+            {
+                Name = name,
+                CourseGrade = Educator.GetGradeFromString(grade),
+                CourseLength = Educator.GetLengthFromString(length),
+                CourseSubject = Educator.GetSubjectFromString(subject)
+            };
 
             ChatGPT chatGPTRequest = new ChatGPT();
-            chatGPTRequest.ApiCall(educator);
-            ViewBag.Responses = chatGPTRequest.ApiCall(educator);
+            //chatGPTRequest.ApiCall(educator);
+            List<string> data = chatGPTRequest.ApiCall(educator);
 
-            return View();
+            //var dataDictionary = new Dictionary<int, string>();
+            //for (int i = 0; i < data.Count; i++)
+            //{
+            //    dataDictionary[i] = data[i];
+            //}
+
+            //return Json(dataDictionary);
+            return Json(new {data});
         }
 
     }
