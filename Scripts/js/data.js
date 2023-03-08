@@ -2,24 +2,23 @@ jQuery($ => {
 	const $form = $("#form");
 	$form.submit(function(e) {
 		e.preventDefault();
-		console.log($form.serialize());
+		const
+			name = $form.find('#name').val(),
+			subject = $form.find('#subject input:checked').val(),
+			grade = $form.find('#grade input:checked').val(),
+			length = $form.find('#length input:checked').val();
 		$.ajax({
 			type: $form.attr('method'),
 			url: $form.attr('action'),
-			data: $form.serialize(),
-			dataType: 'text',
-			contentType: 'application/json',
+			data: { "name": name, "subject": subject, "grade": grade, "length": length },
+			dataType: 'json',
 			success: function (response) {
-				if (response) {
-					if (response[0] == null || response[0] == '') {
-						console.log('Data returned null or empty.');
-					} else {
-						console.log(response);
-					}
-				} else {
-					console.log('No response at all.')
+				var children = document.querySelector('#responses').children;
+				for (let i = 0; i < response.data.length; i++) {
+					let text = response.data[i];
+					let child = children[i];
+					child.children[0].innerHTML = text;
 				}
-				
 			}
 		});
 		return false;
