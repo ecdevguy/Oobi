@@ -1,235 +1,236 @@
 ﻿@{
     Layout = null;
 }
+/Applications/Visual Studio.app/Contents/MonoBundle/MSBuild/Current/bin/Microsoft.Common.CurrentVersion.targets(5,5): Warning MSB3245: Could not resolve this reference. Could not locate the assembly "System.Web.Entity". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. (MSB3245) (Oobi)
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index, follow">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
 
-        <title>
-            Oobi | An AI-powered app for teachers | Report card comments
-        </title>
-        <meta property="og:title" content="Oobi | An AI-powered report card comment generator for teachers." />
-        <meta name="twitter:title" content="Oobi | An AI-powered report card comment generator for teachers.">
-        <meta name="description" content="Oobi uses ChatGPT to help teachers save time. Generate report card comments and student feedback with this easy to use resource for teachers."/>
-        <meta property="og:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate student feedback and comments for report cards.">
-        <meta name="twitter:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate student feedback and comments for report cards.">
+    <title>
+        Oobi | An AI-powered app for teachers | Report card comments
+    </title>
+    <meta property="og:title" content="Oobi | An AI-powered report card comment generator for teachers." />
+    <meta name="twitter:title" content="Oobi | An AI-powered report card comment generator for teachers.">
+    <meta name="description" content="Oobi uses ChatGPT to help teachers save time. Generate report card comments and student feedback with this easy to use resource for teachers." />
+    <meta property="og:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate student feedback and comments for report cards.">
+    <meta name="twitter:description" content="Are you a teacher looking for ways to save time? Try Oobi, an AI-powered tool for teachers that uses ChatGPT to quickly generate student feedback and comments for report cards.">
 
-        <meta property="og:image" content="og.png" />
-        <meta name="twitter:image" content="og.png">
+    <meta property="og:image" content="og.png" />
+    <meta name="twitter:image" content="og.png">
 
-        <meta property="og:site_name" content="Oobi App" />
-        <meta name="twitter:site" content="Oobi App">
-        <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Oobi App" />
+    <meta name="twitter:site" content="Oobi App">
+    <meta property="og:type" content="website" />
 
-        <meta property="og:url" content="" />
-        <meta name="twitter:url" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:url" content="" />
 
-        <meta property="og:author" content="Meza, LLC" />
-        <meta name="twitter:creator" content="Meza, LLC">
-        <meta name="theme-color" content="#54C9E4">
+    <meta property="og:author" content="Meza, LLC" />
+    <meta name="twitter:creator" content="Meza, LLC">
+    <meta name="theme-color" content="#54C9E4">
 
-        <base href="" target="_self">
-        <link rel="canonical" href="" />
+    <base href="" target="_self">
+    <link rel="canonical" href="" />
 
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
-        <link rel="apple-touch-icon-precomposed" href="favicon57.png" />
-        <link rel="icon" href="favicon32.png" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
+    <link rel="apple-touch-icon-precomposed" href="favicon57.png" />
+    <link rel="icon" href="favicon32.png" />
 
-        <link rel="stylesheet" href="/Content/Site.css" />
-        <script src="/Scripts/jquery-3.4.1.min.js"></script>
-    </head>
-    <body>
-        <header id="header">
-            <img src="" alt="Oobi logo">
-        </header>
-        <main id="content">
-            <section id="hero">
-                <h1>
-                    Hi there. I&rsquo;m Oobi, an AI-powered comment generator app for&nbsp;teachers.
-                    </h1>
-                <p class="h3 ta-c">
-                    We can quickly generate customizable student feedback and report card comments with the help of&nbsp;ChatGPT.
-                    </p>
-            </section>
-            <h2 class="sr-only">
-                Generate comments for <span data-value="another">your</span>&nbsp;student
-                </h2>
-            <form>
-                <div class="form-field">
-                    <label for="firstName">
-                        What is your student's first&nbsp;name?
-                        </label>
-                    <input id="firstName" type="text" placeholder="Enter Student's First Name">
-                </div>
-                <div class="form-field">
-                    <fieldset id="subject" class="select">
-                        <legend>
-                            What subject are we&nbsp;grading?
-                            </legend>
-                        <input type="radio" id="subjectPlaceholder" name="subject" disabled checked">
-                        <label for="subjectPlaceholder">
-                            Choose a subject
-                            </label>
-                        <input type="radio" id="subjectArt" name="subject" value="art">
-                        <label for="subjectArt">
-                            Art
-                            </label>
-                        <input type="radio" id="subjectEnglish" name="subject" value="english">
-                        <label for="subjectEnglish">
-                            English
-                            </label>
-                        <input type="radio" id="subjectHistory" name="subject" value="history">
-                        <label for="subjectHistory">
-                            History
-                            </label>
-                        <input type="radio" id="subjectMath" name="subject" value="math">
-                        <label for="subjectMath">
-                            Math
-                            </label>
-                        <input type="radio" id="subjectScience" name="subject" value="science">
-                        <label for="subjectScience">
-                            Science
-                            </label>
-                    </fieldset>
-                </div>
-                <div class="form-field">
-                    <fieldset id="grade" class="select">
-                        <legend>
-                            What grade did they&nbsp;receive?
-                            </legend>
-                        <input type="radio" id="gradePlaceholder" name="grade" disabled checked">
-                        <label for="gradePlaceholder">
-                            Choose a grade
-                            </label>
-                        <input type="radio" id="gradeA" name="grade" value="a">
-                        <label for="gradeA">
-                            A
-                            </label>
-                        <input type="radio" id="gradeB" name="grade" value="b">
-                        <label for="gradeB">
-                            B
-                            </label>
-                        <input type="radio" id="gradeC" name="grade" value="c">
-                        <label for="gradeC">
-                            C
-                            </label>
-                        <input type="radio" id="gradeD" name="grade" value="d">
-                        <label for="gradeD">
-                            D
-                            </label>
-                        <input type="radio" id="gradeF" name="grade" value="f">
-                        <label for="gradeF">
-                            F
-                            </label>
-                    </fieldset>
-                </div>
-                <div class="form-field">
-                    <fieldset id="commentLength" class="select">
-                        <legend>
-                            How long should the comment&nbsp;be?
-                            </legend>
-                        <input type="radio" id="commentLengthPlaceholder" name="commentLength" disabled checked">
-                        <label for="commentLengthPlaceholder">
-                            Choose comment length
-                            </label>
-                        <input type="radio" id="commentShort" name="commentLength" value="short">
-                        <label for="commentShort">
-                            Short (1-2 sentences)
-                            </label>
-                        <input type="radio" id="commentMedium" name="commentLength" value="medium">
-                        <label for="commentMedium">
-                            Medium (2-3 sentences)
-                            </label>
-                        <input type="radio" id="commentLong" name="commentLength" value="long">
-                        <label for="commentLong">
-                            Long (3-4 sentences)
-                            </label>
-                    </fieldset>
-                </div>
-                <div class="form-field">
-                    <input id="acceptTerms" type="checkbox" name="acceptTerms" value="accepted">
-                    <label for="acceptTerms">
-                        I agree to the Terms and Conditions
-                        </label>
-                </div>
-                <div class="form-field">
-                    <input id="submit" type="submit" value="Try me" data-value="Create student feedback">
-                </div>
-            </form>
-            <h2>
-                Here are my feedback suggestions for
-                </h2>
-            <p id="studentName" class="h1">
-                Alexander
-                </p>
-            <div id="oobi">
-                <svg id="oobi-arm-back-left"></svg>
-                <svg id="oobi-arm-back-right"></svg>
-                <svg id="oobi-arm-front-left"></svg>
-                <svg id="oobi-arm-front-right"></svg>
-                <img src="" alt="Oobi the Octopus">
+    <link rel="stylesheet" href="/Content/Site.css" />
+    <script src="/Scripts/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <img src="" alt="Oobi logo">
+    </header>
+    <main id="content">
+        <section id="hero">
+            <h1>
+                Hi there. I&rsquo;m Oobi, an AI-powered comment generator app for&nbsp;teachers.
+            </h1>
+            <p class="h3 ta-c">
+                We can quickly generate customizable student feedback and report card comments with the help of&nbsp;ChatGPT.
+            </p>
+        </section>
+        <h2 class="sr-only">
+            Generate comments for <span data-value="another">your</span>&nbsp;student
+        </h2>
+        <form>
+            <div class="form-field">
+                <label for="firstName">
+                    What is your student's first&nbsp;name?
+                </label>
+                <input id="firstName" type="text" placeholder="Enter Student's First Name">
             </div>
-            <div id="responses">
-                <div class="response">
-                    <div class="card">
-                        <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="copyBtn">Copy</button>
-                        <button type="button" class="nextBtn">Next</button>
-                    </div>
-                </div>
-                <div class="response">
-                    <div class="card">
-                        <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="copyBtn">Copy</button>
-                        <button type="button" class="nextBtn">Next</button>
-                    </div>
-                </div>
-                <div class="response">
-                    <div class="card">
-                        <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="copyBtn">Copy</button>
-                        <button type="button" class="nextBtn">Next</button>
-                    </div>
-                </div>
-                <div class="response">
-                    <div class="card">
-                        <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="copyBtn">Copy</button>
-                        <button type="button" class="nextBtn">Next</button>
-                    </div>
-                </div>
+            <div class="form-field">
+                <fieldset id="subject" class="select">
+                    <legend>
+                        What subject are we&nbsp;grading?
+                    </legend>
+                    <input type="radio" id="subjectPlaceholder" name="subject" disabled checked">
+                    <label for="subjectPlaceholder">
+                        Choose a subject
+                    </label>
+                    <input type="radio" id="subjectArt" name="subject" value="art">
+                    <label for="subjectArt">
+                        Art
+                    </label>
+                    <input type="radio" id="subjectEnglish" name="subject" value="english">
+                    <label for="subjectEnglish">
+                        English
+                    </label>
+                    <input type="radio" id="subjectHistory" name="subject" value="history">
+                    <label for="subjectHistory">
+                        History
+                    </label>
+                    <input type="radio" id="subjectMath" name="subject" value="math">
+                    <label for="subjectMath">
+                        Math
+                    </label>
+                    <input type="radio" id="subjectScience" name="subject" value="science">
+                    <label for="subjectScience">
+                        Science
+                    </label>
+                </fieldset>
             </div>
-        </main>
-        <footer id="footer">
-            <ul class="legal-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-            <p class="copyright">
-                &copy;2023 Meza,&nbsp;LLC. All rights reserved.
-                </p>
-        </footer>
-        <div id="background">
-            <svg class="bubbles"></svg>
-            <svg class="bubbles"></svg>
-            <svg class="bubbles"></svg>
-            <svg class="bubbles"></svg>
-            <svg class="bubbles"></svg>
+            <div class="form-field">
+                <fieldset id="grade" class="select">
+                    <legend>
+                        What grade did they&nbsp;receive?
+                    </legend>
+                    <input type="radio" id="gradePlaceholder" name="grade" disabled checked">
+                    <label for="gradePlaceholder">
+                        Choose a grade
+                    </label>
+                    <input type="radio" id="gradeA" name="grade" value="a">
+                    <label for="gradeA">
+                        A
+                    </label>
+                    <input type="radio" id="gradeB" name="grade" value="b">
+                    <label for="gradeB">
+                        B
+                    </label>
+                    <input type="radio" id="gradeC" name="grade" value="c">
+                    <label for="gradeC">
+                        C
+                    </label>
+                    <input type="radio" id="gradeD" name="grade" value="d">
+                    <label for="gradeD">
+                        D
+                    </label>
+                    <input type="radio" id="gradeF" name="grade" value="f">
+                    <label for="gradeF">
+                        F
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-field">
+                <fieldset id="commentLength" class="select">
+                    <legend>
+                        How long should the comment&nbsp;be?
+                    </legend>
+                    <input type="radio" id="commentLengthPlaceholder" name="commentLength" disabled checked">
+                    <label for="commentLengthPlaceholder">
+                        Choose comment length
+                    </label>
+                    <input type="radio" id="commentShort" name="commentLength" value="short">
+                    <label for="commentShort">
+                        Short (1-2 sentences)
+                    </label>
+                    <input type="radio" id="commentMedium" name="commentLength" value="medium">
+                    <label for="commentMedium">
+                        Medium (2-3 sentences)
+                    </label>
+                    <input type="radio" id="commentLong" name="commentLength" value="long">
+                    <label for="commentLong">
+                        Long (3-4 sentences)
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-field">
+                <input id="acceptTerms" type="checkbox" name="acceptTerms" value="accepted">
+                <label for="acceptTerms">
+                    I agree to the Terms and Conditions
+                </label>
+            </div>
+            <div class="form-field">
+                <input id="submit" type="submit" value="Try me" data-value="Create student feedback">
+            </div>
+        </form>
+        <h2>
+            Here are my feedback suggestions for
+        </h2>
+        <p id="studentName" class="h1">
+            Alexander
+        </p>
+        <div id="oobi">
+            <svg id="oobi-arm-back-left"></svg>
+            <svg id="oobi-arm-back-right"></svg>
+            <svg id="oobi-arm-front-left"></svg>
+            <svg id="oobi-arm-front-right"></svg>
+            <img src="" alt="Oobi the Octopus">
         </div>
-        <script src="/Scripts/Site.js"></script>
-    </body>
+        <div id="responses">
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+            <div class="response">
+                <div class="card">
+                    <p>Great job, Alex! Your hard work and dedication to your studies have paid off, as demonstrated by your excellent grade in Math. Your mastery of the subject material is impressive, and I look forward to seeing you continue to excel in your academic pursuits.</p>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="copyBtn">Copy</button>
+                    <button type="button" class="nextBtn">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <ul class="legal-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+        <p class="copyright">
+            &copy;2023 Meza,&nbsp;LLC. All rights reserved.
+        </p>
+    </footer>
+    <div id="background">
+        <svg class="bubbles"></svg>
+        <svg class="bubbles"></svg>
+        <svg class="bubbles"></svg>
+        <svg class="bubbles"></svg>
+        <svg class="bubbles"></svg>
+    </div>
+    <script src="/Scripts/Site.js"></script>
+</body>
 </html>
