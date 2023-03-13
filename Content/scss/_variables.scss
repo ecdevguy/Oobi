@@ -1,11 +1,13 @@
 $white: #EDFAFD;
 $primary-cool-color: #54C9E4;
 $secondary-cool-color: #119DBD;
+$tertiary-cool-color: #0C92B0;
 $primary-warm-color: #F6E642;
 
 :root {
     --white: #{$white};
     --primary-cool-color: #{$primary-cool-color};
     --secondary-cool-color: #{$secondary-cool-color};
+    --tertiary-cool-color: #{$tertiary-cool-color};
     --primary-warm-color: #{$primary-warm-color};
 }

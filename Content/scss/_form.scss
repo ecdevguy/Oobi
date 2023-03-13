@@ -25,7 +25,8 @@ fieldset {
     border-radius: rem(7px);
     background: rgba(white, 0.8);
     border: rem(3px) solid var(--secondary-cool-color);
-    color: var(--secondary-cool-color);
+    font-size: rem(21px);
+    color: var(--tertiary-cool-color);
 }
 
 input[type="text"] {
