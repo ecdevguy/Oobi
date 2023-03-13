@@ -22,7 +22,7 @@ fieldset {
     display: block;
     width: 100%;
     padding: 0.75em 1em;
-    border-radius: rem(7px);
+    border-radius: rem(7px); // variable for border radius
     background: rgba(white, 0.8);
     border: rem(3px) solid var(--secondary-cool-color);
     font-size: rem(21px);
@@ -48,5 +48,57 @@ fieldset {
         bottom: calc(100% + #{rem(8px)});
         left: 0;
         color: var(--white);
+    }
+}
+
+.select {
+    padding: 0;
+    .dropdown {
+        position: relative;
+         &-menu {
+            position: absolute; // mixin for positioning
+            top: calc(100% - #{rem(3px)});
+            left: rem(-3px); right: rem(-3px); // variable for border width
+            padding: 0.375em 0 0;
+            opacity: 0;
+            pointer-events: none;
+            overflow: hidden;
+            border-radius: 0 0 rem(7px) rem(7px);
+            background: rgba(white, 0.8); // variable for background
+            border: rem(3px) solid var(--secondary-cool-color); // variable for border
+        }
+        &-selected {
+            padding: 0.75em 1em; // variable for padding
+        }
+        @include hover {
+            .dropdown-selected + .dropdown-menu {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+    input[type="radio"] {
+        
+        + label {
+            display: block;
+            padding: 0.375em 1em;
+            margin: 0;
+            cursor: pointer;
+        }
+        &:not(:disabled) + label {
+            @include hover {
+                background: white;
+                font-weight: 700; // variable for bold
+            }
+        }
+        &:checked + label {
+            background: white;
+            font-weight: 700;
+        }
+        &:disabled + label {
+            color: var(--primary-cool-color);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
     }
 }
