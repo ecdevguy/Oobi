@@ -1,0 +1,9 @@
+.card {
+    padding: rem($base-spacing * 1.5) rem($base-spacing * 2) rem($base-spacing * 3);
+    overflow: hidden;
+    border-radius: rem(14px);
+    background: var(--white);
+    box-shadow: 0 0 rem(40px) rem(-5px) rgba(0,0,0,0.35);
+    color: var(--tertiary-cool-color);
+    cursor: pointer;
+}

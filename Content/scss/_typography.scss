@@ -43,3 +43,11 @@ h3, .h3 {
     font-size: rem(28px);
     line-height: 1.3;
 }
+
+a {
+    color: var(--primary-warm-color);
+    text-decoration: underline;
+    @include hover {
+        text-decoration: none;
+    }
+}
