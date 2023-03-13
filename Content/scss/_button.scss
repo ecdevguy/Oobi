@@ -1,0 +1,16 @@
+$btn: 'button, input[type="submit"], .button';
+
+#{$btn} {
+    padding: 0.55em 2.5em 0.65em;
+    border-radius: rem(100px);
+    background: var(--secondary-warm-color);
+    border: rem(7px) solid var(--tertiary-warm-color);
+    font-size: rem(24px);
+    line-height: 1;
+    font-weight: 700;
+    color: var(--primary-warm-color);
+    @include hover {
+        background: var(--tertiary-warm-color);
+        transform: scale(1.1);
+    }
+}
