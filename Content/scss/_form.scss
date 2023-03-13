@@ -51,6 +51,29 @@ fieldset {
     }
 }
 
+input[type="checkbox"] {
+        
+    + label {
+        display: block;
+        margin: 0;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 1em; height: 1em; // mixin for size
+            margin: -0.2em 0.5em 0 0;
+            border-radius: 50%; // mixin for circle
+            background: rgba($primary-cool-color, 0.8);
+            border: rem(3px) solid var(--white);
+        }
+    }
+    &:checked + label:before {
+        background: var(--secondary-warm-color);
+    }
+}
+
 .select {
     padding: 0;
     .dropdown {
