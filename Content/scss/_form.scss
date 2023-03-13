@@ -9,11 +9,16 @@
 form {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 
     .form-field {
         flex: 0 0 25%;
-        max-width: 25%;
         padding: rem($base-spacing);
+        &.full-width {
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: center;
+        }
     }
 }
 
@@ -35,9 +40,11 @@ input[type="text"] {
     }
 }
 
-label {
-    display: inline-block;
+label, legend {
+    display: block;
     margin-bottom: rem(5px);
+    font-size: rem(18px);
+    white-space: nowrap;
 }
 
 fieldset {
@@ -45,7 +52,7 @@ fieldset {
     margin-top: rem(($base-font-size * 1.5) + 5px);
     legend {
         position: absolute;
-        bottom: calc(100% + #{rem(8px)});
+        bottom: 100%;
         left: 0;
         color: var(--white);
     }
@@ -62,11 +69,11 @@ input[type="checkbox"] {
             content: '';
             display: inline-block;
             vertical-align: middle;
-            width: 1em; height: 1em; // mixin for size
+            width: 1.5em; height: 1.5em; // mixin for size
             margin: -0.2em 0.5em 0 0;
             border-radius: 50%; // mixin for circle
             background: rgba($primary-cool-color, 0.8);
-            border: rem(3px) solid var(--white);
+            border: rem(4px) solid var(--white);
         }
     }
     &:checked + label:before {
@@ -80,8 +87,8 @@ input[type="checkbox"] {
         position: relative;
          &-menu {
             position: absolute; // mixin for positioning
-            top: calc(100% - #{rem(3px)});
-            left: rem(-3px); right: rem(-3px); // variable for border width
+            top: calc(100% - #{rem(1px)});
+            left: rem(-2px); right: rem(-2px); // variable for border width
             padding: 0.375em 0 0;
             opacity: 0;
             pointer-events: none;
@@ -101,11 +108,13 @@ input[type="checkbox"] {
         }
     }
     input[type="radio"] {
+        @include sr-only();
         
         + label {
             display: block;
             padding: 0.375em 1em;
             margin: 0;
+            font-size: rem(21px);
             cursor: pointer;
         }
         &:not(:disabled) + label {
