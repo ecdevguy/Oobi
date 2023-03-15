@@ -1,5 +1,7 @@
 .card {
-    padding: rem($base-spacing * 1.5) rem($base-spacing * 2) rem($base-spacing * 3);
+    display: block;
+    height: 100%;
+    padding: rem($base-spacing * 1.5) rem($base-spacing * 2) 0;
     overflow: hidden;
     border-radius: rem(14px);
     background: var(--white);

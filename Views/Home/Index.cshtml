@@ -42,7 +42,7 @@
     <link rel="icon" href="/Content/img/favicon32.png" />
 
     <link rel="stylesheet" href="/Content/Site.css" />
-    <script src="/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="/Scripts/jquery-3.6.3.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -57,16 +57,16 @@
                 We can quickly generate customizable student feedback and report card comments with the help of&nbsp;ChatGPT.
             </p>
         </section>
-        <section id="form">
+        <section>
             <h2 class="sr-only">
                 Generate comments for <span data-value="another">your</span>&nbsp;student
             </h2>
-            <form>
+            <form name="form" id="form" action="/Home/GetResponses" method="post">
                 <div class="form-field">
-                    <label for="firstName">
+                    <label for="name">
                         What is your student's first&nbsp;name?
                     </label>
-                    <input id="firstName" type="text" placeholder="Enter Student's First Name">
+                    <input id="name" name="name" type="text" placeholder="Enter Student's First Name">
                 </div>
                 <div class="form-field">
                     <fieldset id="subject" class="select">
@@ -141,27 +141,27 @@
                     </fieldset>
                 </div>
                 <div class="form-field">
-                    <fieldset id="commentLength" class="select">
+                    <fieldset id="length" class="select">
                         <legend>
                             How long should the comment&nbsp;be?
                         </legend>
                         <div class="dropdown">
                             <div class="dropdown-selected">Choose comment length</div>
                             <div class="dropdown-menu">
-                                <input type="radio" id="commentLengthPlaceholder" name="commentLength" disabled checked">
-                                <label for="commentLengthPlaceholder">
+                                <input type="radio" id="lengthPlaceholder" name="length" disabled checked">
+                                <label for="lengthPlaceholder">
                                     Choose comment length
                                 </label>
-                                <input type="radio" id="commentShort" name="commentLength" value="short">
-                                <label for="commentShort">
+                                <input type="radio" id="lengthShort" name="length" value="short">
+                                <label for="lengthShort">
                                     Short (1-2 sentences)
                                 </label>
-                                <input type="radio" id="commentMedium" name="commentLength" value="medium">
-                                <label for="commentMedium">
+                                <input type="radio" id="lengthMedium" name="length" value="medium">
+                                <label for="lengthMedium">
                                     Medium (2-3 sentences)
                                 </label>
-                                <input type="radio" id="commentLong" name="commentLength" value="long">
-                                <label for="commentLong">
+                                <input type="radio" id="lengthLong" name="length" value="long">
+                                <label for="lengthLong">
                                     Long (3-4 sentences)
                                 </label>
                             </div>
@@ -169,7 +169,7 @@
                     </fieldset>
                 </div>
                 <div class="form-field full-width">
-                    <input id="acceptTerms" type="checkbox" name="acceptTerms" value="accepted">
+                    <input id="acceptTerms" type="checkbox" value="accepted">
                     <label for="acceptTerms">
                         I agree to the <a href="#" title="Terms and Conditions">Terms and Conditions</a>
                     </label>
@@ -238,13 +238,6 @@
             &copy;2023 Meza,&nbsp;LLC. All rights reserved.
         </p>
     </footer>
-    <div id="background">
-        <svg class="bubbles"></svg>
-        <svg class="bubbles"></svg>
-        <svg class="bubbles"></svg>
-        <svg class="bubbles"></svg>
-        <svg class="bubbles"></svg>
-    </div>
     <script src="/Scripts/Site.js"></script>
 </body>
 </html>
