@@ -32,11 +32,20 @@ fieldset {
     border: rem(3px) solid var(--secondary-cool-color);
     font-size: rem(21px);
     color: var(--tertiary-cool-color);
+
+    &.error {
+        border-color: var(--secondary-warm-color);
+    }
 }
 
 input[type="text"] {
     @include placeholder {
         color: var(--primary-cool-color);
+    }
+    &.error {
+        @include placeholder {
+            color: var(--secondary-warm-color);
+        }
     }
 }
 
@@ -131,6 +140,11 @@ input[type="checkbox"] {
             color: var(--primary-cool-color);
             cursor: not-allowed;
             pointer-events: none;
+        }
+    }
+    &.error {
+        .dropdown-selected {
+            color: var(--secondary-warm-color);
         }
     }
 }
