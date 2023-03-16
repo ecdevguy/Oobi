@@ -16,8 +16,9 @@ form {
         padding: rem($base-spacing);
         &.full-width {
             flex: 0 0 100%;
-            display: flex;
-            justify-content: center;
+        }
+        &.auto {
+            flex: 0 0 auto;
         }
     }
 }
@@ -43,6 +44,7 @@ input[type="text"] {
         color: var(--primary-cool-color);
     }
     &.error {
+        border-radius: rem(7px) rem(7px) 0 0;
         @include placeholder {
             color: var(--secondary-warm-color);
         }
@@ -72,6 +74,7 @@ input[type="checkbox"] {
     + label {
         display: block;
         margin: 0;
+        text-align: center;
         cursor: pointer;
 
         &:before {
@@ -143,8 +146,22 @@ input[type="checkbox"] {
         }
     }
     &.error {
+        border-radius: rem(7px) rem(7px) 0 0;
         .dropdown-selected {
             color: var(--secondary-warm-color);
         }
+    }
+}
+
+.error-msg {
+    padding: 0.4em 1.5em 0.5em;
+    font-size: rem(16px);
+    border-radius: 0 0 rem(7px) rem(7px);
+    background: var(--secondary-warm-color);
+    color: var(--white);
+
+    &.checkbox {
+        margin-top: 0.5em;
+        border-radius: rem(7px);
     }
 }

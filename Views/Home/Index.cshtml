@@ -66,10 +66,10 @@
                     <label for="name">
                         What is your student's first&nbsp;name?
                     </label>
-                    <input id="name" name="name" type="text" placeholder="Enter Student's First Name">
+                    <input id="name" name="name" type="text" placeholder="Enter Student's First Name" data-error="Please enter your student's first name.">
                 </div>
                 <div class="form-field">
-                    <fieldset id="subject" class="select">
+                    <fieldset id="subject" class="select" data-error="Please choose a subject.">
                         <legend>
                             What subject are we&nbsp;grading?
                         </legend>
@@ -105,7 +105,7 @@
                     </fieldset>
                 </div>
                 <div class="form-field">
-                    <fieldset id="grade" class="select">
+                    <fieldset id="grade" class="select" data-error="Please choose a grade.">
                         <legend>
                             What grade did they&nbsp;receive?
                         </legend>
@@ -141,7 +141,7 @@
                     </fieldset>
                 </div>
                 <div class="form-field">
-                    <fieldset id="length" class="select">
+                    <fieldset id="length" class="select" data-error="Please select a comment length.">
                         <legend>
                             How long should the comment&nbsp;be?
                         </legend>
@@ -168,26 +168,26 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="form-field full-width">
-                    <input id="acceptTerms" type="checkbox" value="accepted">
+                <div class="acceptTerms form-field auto">
+                    <input id="acceptTerms" type="checkbox" data-error="Please accept the Terms and Conditions to continue.">
                     <label for="acceptTerms">
                         I agree to the <a href="#" title="Terms and Conditions">Terms and Conditions</a>
                     </label>
                 </div>
                 <div class="form-field full-width">
-                    <input id="submit" type="submit" value="Try me" data-value="Create student feedback">
+                    <input id="submit" type="submit"class="button center" value="Try me" data-value="Create student feedback">
                 </div>
             </form>
         </section>
-        <section id="results">
-            <h2>
-                Here are my feedback suggestions for
-            </h2>
-            <p class="studentName h1 ta-c">
-                Alexander
-            </p>
+        <section id="results" style="display:none">
             <div class="oobi">
                 <img src="/Content/img/oobi-head.webp" alt="Oobi the Octopus" class="oobiHead oobi-head">
+            </div>
+            <div class="resultsText">
+                <h2>
+                    Here are my feedback suggestions for
+                </h2>
+                <p class="studentName h1 ta-c"></p>
             </div>
             <div id="responses">
                 <div class="response">
