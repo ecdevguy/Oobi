@@ -15,6 +15,6 @@ nameInput.addEventListener('keyup', () => {
     }
 });
 const acceptTermsInput = document.querySelector('#acceptTerms');
-acceptTermsInput.nextElementSibling.addEventListener('click', () => {
-    acceptTermsInput.nextElementSibling.nextElementSibling.remove();
+acceptTermsInput.nextSibling.addEventListener('click', () => {
+    acceptTermsInput.nextSibling.nextSibling.remove();
 });

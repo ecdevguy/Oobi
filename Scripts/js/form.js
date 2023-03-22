@@ -99,10 +99,32 @@ $form.submit(function (e) {
 				$btnSubmit.val($btnSubmit.data('value'));
 				// Add responses to cards
 				const children = document.querySelector('#responses').children;
+				// Set variable to check largest height
+				let maxHeight = 0;
+				// Loop through all responses
 				for (let i = 0; i < response.data.length; i++) {
-					let text = response.data[i];
-					let child = children[i];
-					child.children[0].innerHTML = text;
+					let text = response.data[i],
+						child = children[i],
+						textarea = child.children[0];
+					// Set response card text
+					textarea.innerHTML = text.trim();
+					// Update response card height
+					setTimeout(function () {
+						textarea.style.height = "1px";
+						textarea.style.height = (50 + textarea.scrollHeight) + "px";
+						// Check for largest response card height
+						if (textarea.scrollHeight > maxHeight)
+							maxHeight = textarea.scrollHeight;
+					}, 100);
+					
+				}
+				// Apply largest height to all response cards
+				for (let i = 0; i < children.length; i++) {
+					let child = children[i],
+						textarea = child.children[0];
+					setTimeout(function () {
+						textarea.style.height = maxHeight + "px";
+					}, 100);
 				}
 				// Show results
 				$results.show();
