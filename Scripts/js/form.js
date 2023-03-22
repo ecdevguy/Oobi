@@ -88,8 +88,6 @@ $form.submit(function (e) {
 			// If successful
 			success: function (response) {
 				console.log('Success!');
-				// Remove acceptTerms input
-				$inputAcceptTerms.parent().remove();
 				// Add name to results text
 				$results.find('.studentName').text(name);
 				// Reset the name field
@@ -116,7 +114,6 @@ $form.submit(function (e) {
 						if (textarea.scrollHeight > maxHeight)
 							maxHeight = textarea.scrollHeight;
 					}, 100);
-					
 				}
 				// Apply largest height to all response cards
 				for (let i = 0; i < children.length; i++) {
@@ -132,6 +129,12 @@ $form.submit(function (e) {
 				$('html, body').animate({
 					scrollTop: $responses.offset().top
 				}, 2000);
+				// Move form under results
+				$("#try").insertAfter("#results");
+				// Show form headline
+				$("#try h2.sr-only").removeClass('sr-only');
+				// Remove acceptTerms input
+				$inputAcceptTerms.parent().remove();
 			}
 		});
 	}
