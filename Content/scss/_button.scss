@@ -26,9 +26,10 @@ $btn: 'button, input[type="submit"], .button';
         }
     }
     &.secondary {
-        border-radius: rem(100px) 0 0 rem(100px);
+        //border-radius: rem(100px) 0 0 rem(100px);
+        border-radius: rem(100px); 
         background: var(--secondary-cool-color);
-        border-right: 0;
+        //border-right: 0;
         color: var(--primary-warm-color);
     }
     &.tertiary {

@@ -8,3 +8,12 @@
         padding: rem($base-spacing);
     }
 }
+
+.legal-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    > li a {
+        padding: 10px;
+    }
+}
