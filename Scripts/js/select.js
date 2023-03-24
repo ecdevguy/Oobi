@@ -14,7 +14,3 @@ nameInput.addEventListener('keyup', () => {
         nameInput.nextSibling.remove();
     }
 });
-const acceptTermsInput = document.querySelector('#acceptTerms');
-acceptTermsInput.nextSibling.addEventListener('click', () => {
-    acceptTermsInput.nextSibling.nextSibling.remove();
-});
