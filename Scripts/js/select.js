@@ -13,11 +13,4 @@ nameInput.addEventListener('keyup', () => {
         nameInput.classList.remove('error');
         nameInput.nextSibling.remove();
     }
-<<<<<<< HEAD
-});
-const acceptTermsInput = document.querySelector('#acceptTerms');
-acceptTermsInput.nextSibling.addEventListener('click', () => {
-    acceptTermsInput.nextSibling.nextSibling.remove();
-=======
->>>>>>> feature-theme
 });
