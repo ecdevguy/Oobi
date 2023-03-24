@@ -41,7 +41,7 @@
     <link rel="apple-touch-icon-precomposed" href="favicon57.png" />
     <link rel="icon" href="/Content/img/favicon32.png" />
 
-    <link rel="stylesheet" href="/Content/Site.css" />
+    <link rel="stylesheet" href="/Content/Site.css?" />
     <script src="/Scripts/jquery-3.6.3.min.js"></script>
 </head>
 <body>
@@ -53,7 +53,7 @@
             <h1>
                 Hi there. I&rsquo;m Oobi, an AI-powered comment generator app for&nbsp;teachers.
             </h1>
-            <p class="h3 ta-c">
+            <p class="h3 ta-c-md">
                 We can quickly generate customizable student feedback and report card comments with the help of&nbsp;ChatGPT.
             </p>
         </section>
@@ -168,14 +168,9 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="acceptTerms form-field auto">
-                    <input id="acceptTerms" type="checkbox" data-error="Please accept the Terms and Conditions to continue.">
-                    <label for="acceptTerms">
-                        I agree to the <a href="#" title="Terms and Conditions">Terms and Conditions</a>
-                    </label>
-                </div>
                 <div class="form-field full-width">
                     <input id="submit" type="submit"class="button center" value="Try me" data-value="Create student feedback">
+                    <p class="small ta-c">By clicking the button to submit the form, you agree to the  <a href="#" title="Terms and Conditions">Terms and Conditions</a>.</p>
                 </div>
             </form>
         </section>
@@ -185,9 +180,9 @@
             </div>
             <div class="resultsText">
                 <h2>
-                    Here are my feedback suggestions for
+                    Here are my feedback suggestions&nbsp;for
                 </h2>
-                <p class="studentName h1 ta-c"></p>
+                <p class="studentName h1 ta-c-md"></p>
             </div>
             <div id="responses">
                 <div class="response">
