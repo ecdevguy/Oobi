@@ -10,15 +10,40 @@ form {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    max-width: rem(1366px - ($base-spacing * 2));
+    margin: 0 auto;
 
     .form-field {
-        flex: 0 0 25%;
-        padding: rem($base-spacing);
+        flex: 0 0 100%;
+        position: relative;
+        padding: rem($base-spacing) 0;
+        @media (min-width: 640px) {
+            flex: 0 0 50%;
+            padding: rem($base-spacing);
+        }
+        @media (min-width: 1024px) {
+            flex: 0 0 33%;
+        }
+        @media (min-width: 1024px) {
+            flex: 0 0 33%;
+        }
+        @media (min-width: 1280px) {
+            flex: 0 0 25%;
+        }
         &.full-width {
             flex: 0 0 100%;
         }
-        &.auto {
-            flex: 0 0 auto;
+        &:nth-child(1) {
+            z-index: 4;
+        }
+        &:nth-child(2) {
+            z-index: 3;
+        }
+        &:nth-child(3) {
+            z-index: 2;
+        }
+        &:nth-child(4) {
+            z-index: 1;
         }
     }
 }

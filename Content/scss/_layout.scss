@@ -1,14 +1,21 @@
-body {
-    height: 100vh;
-}
 #responses {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    max-width: rem(1920px - ($base-spacing * 2));
+    margin: 0 auto;
     .response {
-        flex: 0 0 25%;
-        max-width: 25%;
-        padding: rem($base-spacing);
+        flex: 0 0 100%;
+        padding: rem($base-spacing) 0;
+        @media (min-width: 640px) {
+            padding: rem($base-spacing);
+        }
+        @media (min-width: 768px) {
+            flex: 0 0 50%;
+        }
+        @media (min-width: 1367px) {
+            flex: 0 0 25%;
+        }
     }
 }
 
