@@ -19,8 +19,10 @@ $btn: 'button, input[type="submit"], .button';
         border: 0;
         font-size: rem(24px);
         border: rem(7px) solid var(--white);
-        &:hover {
+        @include hover {
             transform: scale(1);
+        }
+        &:hover {
             padding-left: 4em;
             padding-right: 4em;
         }

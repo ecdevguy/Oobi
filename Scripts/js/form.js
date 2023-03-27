@@ -94,26 +94,9 @@ $form.submit(function (e) {
 				// Loop through all responses
 				for (let i = 0; i < response.data.length; i++) {
 					let text = response.data[i],
-						child = children[i],
-						textarea = child.children[0];
+						card = children[i].children[0].children[0];
 					// Set response card text
-					textarea.innerHTML = text.trim();
-					// Update response card height
-					setTimeout(function () {
-						textarea.style.height = "1px";
-						textarea.style.height = (50 + textarea.scrollHeight) + "px";
-						// Check for largest response card height
-						if (textarea.scrollHeight > maxHeight)
-							maxHeight = textarea.scrollHeight;
-					}, 100);
-				}
-				// Apply largest height to all response cards
-				for (let i = 0; i < children.length; i++) {
-					let child = children[i],
-						textarea = child.children[0];
-					setTimeout(function () {
-						textarea.style.height = maxHeight + "px";
-					}, 100);
+					card.textContent = text;
 				}
 				// Show results
 				$results.show();

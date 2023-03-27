@@ -18,13 +18,14 @@ body {
     margin: 0 auto;
     .response {
         flex: 0 0 100%;
-        padding: rem($base-spacing) 0;
+        padding: rem($base-spacing) 0 rem($base-spacing * 2);
         @media (min-width: 768px) {
             flex: 0 0 50%;
-            padding: rem($base-spacing);
+            padding: rem($base-spacing) rem($base-spacing) rem($base-spacing * 2);
         }
         @media (min-width: 1367px) {
             flex: 0 0 25%;
+            padding: rem($base-spacing);
         }
 >>>>>>> feature-theme
     }
