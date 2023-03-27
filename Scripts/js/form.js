@@ -62,14 +62,6 @@ $form.submit(function (e) {
 		$inputLength.removeClass('error');
 		$inputLength.next('.error-msg').remove();
 	}
-	// Check if user agrees to terms and conditions
-	if (!$inputAcceptTerms.is(':checked')) {
-		if (!$inputAcceptTerms.parent().has('.error-msg').length)
-			$("<p class='error-msg checkbox'>" + $inputAcceptTerms.data("error") + "</p>").insertAfter('#acceptTerms + label');
-		errors++;
-	} else {
-		$inputAcceptTerms.next().next('.error-msg').remove();
-	}
 	// If there are no errors
 	if (errors == 0) {
 		// Add loading indicator
@@ -125,16 +117,20 @@ $form.submit(function (e) {
 				}
 				// Show results
 				$results.show();
-				// Scroll user to response cards
-				$('html, body').animate({
-					scrollTop: $responses.offset().top
-				}, 2000);
+				// Swap headline text
+				const $headlineSection = $('#try'),
+					$headline = $('#try h2');
+				$headline.text($headline.data('alt-text'));
 				// Move form under results
-				$("#try").insertAfter("#results");
+				$headlineSection.insertAfter("#results");
 				// Show form headline
-				$("#try h2.sr-only").removeClass('sr-only');
+				$headline.removeClass('sr-only');
 				// Remove acceptTerms input
 				$inputAcceptTerms.parent().remove();
+				// Scroll user to response cards
+				$('html, body').animate({
+					scrollTop: $responses.offset().top - 200
+				}, 2000);
 			}
 		});
 	}
