@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-body {
-    height: 100vh;
-}
-=======
->>>>>>> feature-theme
 #responses {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-<<<<<<< HEAD
-    .response {
-        flex: 0 0 25%;
-        max-width: 25%;
-        padding: rem($base-spacing);
-=======
     max-width: rem(1920px - ($base-spacing * 2));
     margin: 0 auto;
     .response {
@@ -27,7 +15,6 @@ body {
             flex: 0 0 25%;
             padding: rem($base-spacing);
         }
->>>>>>> feature-theme
     }
 }
 

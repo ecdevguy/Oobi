@@ -10,17 +10,6 @@ form {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-<<<<<<< HEAD
-
-    .form-field {
-        flex: 0 0 25%;
-        padding: rem($base-spacing);
-        &.full-width {
-            flex: 0 0 100%;
-        }
-        &.auto {
-            flex: 0 0 auto;
-=======
     max-width: rem(1366px - ($base-spacing * 2));
     margin: 0 auto;
 
@@ -55,7 +44,6 @@ form {
         }
         &:nth-child(4) {
             z-index: 1;
->>>>>>> feature-theme
         }
     }
 }
