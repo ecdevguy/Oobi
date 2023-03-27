@@ -10,4 +10,8 @@
     font-size: rem(21px);
     color: var(--tertiary-cool-color);
     cursor: pointer;
+
+    .response-text.selected {
+        background: var(--primary-warm-color);
+    }
 }

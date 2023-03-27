@@ -1,29 +1,24 @@
 // For all copy buttons
-const copyBtns = document.querySelectorAll('.copyBtn');
-copyBtns.forEach((btn) => {
-    let textarea = btn.parentElement.previousElementSibling;
-    btn.addEventListener('click', () => {
-        // Select the text field
-        textarea.focus();
-        textarea.select();
-        // Copy the text
-        document.execCommand("copy");
-        btn.textContent = "Copied!"
+$('.copyBtn').each(function () {
+    let $this = $(this),
+        $card = $this.parent().prev('.card'),
+        $text = $card.find('.response-text');
+    $this.click(function () {
+        navigator.clipboard.writeText($text.text());
+        $text.addClass('selected');
+        $this.text('Copied!');
         setTimeout(function () {
-            window.getSelection().removeAllRanges();
-            btn.textContent = "Copy";
-        }, 3000)
+            $text.removeClass('selected');
+            $this.text('Copy');
+        }, 3000);
     });
-    textarea.addEventListener('click', () => {
-        // Select the text field
-        textarea.focus();
-        textarea.select();
-        // Copy the text
-        document.execCommand("copy");
-        btn.textContent = "Copied!"
+    $card.click(function () {
+        navigator.clipboard.writeText($text.text());
+        $text.addClass('selected');
+        $this.text('Copied!');
         setTimeout(function () {
-            window.getSelection().removeAllRanges();
-            btn.textContent = "Copy";
-        }, 3000)
+            $text.removeClass('selected');
+            $this.text('Copy');
+        }, 3000);
     });
 });
