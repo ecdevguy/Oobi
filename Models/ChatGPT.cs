@@ -25,7 +25,7 @@ namespace Oobi.Models
             var input = new //add 'n' completions; add switch for max tokens & length; 'short: max tokens = 100, n = 4' 'medium: max tokens = 200, n = 2' etc.
                 {
                     model = "text-davinci-002",
-                    prompt = $"As a teacher give {educator.CourseLength} feedback to {educator.Name} who recieved a grade of {educator.CourseGrade} in {educator.CourseSubject}",
+                    prompt = $"As a school teacher give generalized feedback to your student, {educator.Name}, who recieved an {educator.CourseGrade} in {educator.CourseSubject}. The feedback must be a {educator.CourseLength} length.",
                     max_tokens = 60,
                     temperature = 1,
                     n = 4
