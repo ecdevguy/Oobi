@@ -104,6 +104,8 @@ namespace Oobi.Models
                     return Subject.Mandarin;
                 case "science":
                     return Subject.Science;
+                case "math":
+                    return Subject.Math;
                 default:
                     throw new ArgumentException("Invalid subject.");
             }
