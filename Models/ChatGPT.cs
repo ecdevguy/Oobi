@@ -41,6 +41,15 @@ namespace Oobi.Models
             var response = MakeApiCall(endpoint, jsonInput, headers);
             JObject obj = JObject.Parse(response);
             var choices = obj["choices"].Select(c => (string)c["text"]).ToList();
+            for (int i = 0; i < choices.Count; i++)
+            {
+                string trimmedStr = choices[i].Trim();
+                if (trimmedStr.StartsWith("."))
+                {
+                    trimmedStr = trimmedStr.Substring(1);
+                }
+                choices[i] = trimmedStr;
+            }
             return choices;
 
 
