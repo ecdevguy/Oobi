@@ -15,7 +15,7 @@ namespace Oobi.Models
     public class ChatGPT
     {
         private static string endpoint = "https://api.openai.com/v1/completions";
-        //private static string apiKey = "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"; //need to hide this
+       
         private static string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.Machine);
 
         public List<string> ApiCall(Educator educator) //add Educator param and change strings to enum for Educator inputs!
