@@ -18,7 +18,7 @@ namespace Oobi.Models
        
         private static string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.Machine);
 
-        public List<string> ApiCall(Educator educator) //add Educator param and change strings to enum for Educator inputs!
+        public List<string> ApiCall(Educator educator)
         {
 
             
