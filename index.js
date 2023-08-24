@@ -1,4 +1,4 @@
-import myJson from 'vocabList.json' assert {type: 'json'};
+import myJson from '/vocabList.json' assert {type: 'json'};
 
 console.log(myJson.hskCharacters);
 
