@@ -6,18 +6,15 @@ let errors = 0;
 
 $(document).ready(() => {
   $('.pinyin-textbox').on('submit', () => {
-    
-      // prevents default behaviour
-      // Prevents event propagation
       return false;
   });
 });
 $('.pinyin-textbox').keypress((e) => {
 
-  // Enter key corresponds to number 13
+
   
   if (e.which === 13 && ($("#chinese-character").attr("pinyin") == $("#pinyin").val())) {
-      //$('.pinyin-textbox').submit();
+      
       let x = Math.floor((Math.random() * 13));
       $("#chinese-character").text(myJson.hskCharacters[x].chinese);
       $("#chinese-character").attr("pinyin", myJson.hskCharacters[x].pinyin)
@@ -37,15 +34,4 @@ $('.pinyin-textbox').keypress((e) => {
     errors = 2;
   }
 
-  
-
-  
-  
-    /* if ($("#chinese-character").attr("pinyin") == $("#pinyin").val()){
-      let x = Math.floor((Math.random() * 13));
-      $("#chinese-character").text(myJson.hskCharacters[x].chinese);
-      $("#chinese-character").attr("pinyin", myJson.hskCharacters[x].pinyin)
-      $("#pinyin").val("");
-      $("#pinyin").attr("placeholder", "");
-    } */
 })
