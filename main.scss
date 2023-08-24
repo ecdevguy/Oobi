@@ -12,7 +12,7 @@
 
 .correct {
   background: rgb(216, 214, 248);
-  background: radial-gradient(circle, rgba(196,192,255,1) 0%, rgba(255,255,255,1) 0%, rgba(97, 177, 201, 0.578) 100%);
+  background: radial-gradient(circle, rgba(196,192,255,1) 0%, rgba(255,255,255,1) 0%, rgba(72, 186, 221, 0.6) 100%);
 }
 
 .incorrect {
@@ -46,8 +46,8 @@ input[type=text] {
 	appearance: none;
 	border: none;
 	outline: none;
-	border-bottom: .2em solid #c4e3e5;
-	background: rgba(#cee6e3, .2);
+	border-bottom: .2em solid #9bc3c6;
+	background: rgba(#a5b9b7, .2);
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
 	color: #000000;
