@@ -59,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .correct {
   background: rgb(216, 214, 248);
-  background: radial-gradient(circle, rgb(196, 192, 255) 0%, rgb(255, 255, 255) 0%, rgba(38, 235, 246, 0.578) 100%);
+  background: radial-gradient(circle, rgb(196, 192, 255) 0%, rgb(255, 255, 255) 0%, rgba(97, 177, 201, 0.578) 100%);
 }
 
 .incorrect {
