@@ -1,0 +1,58 @@
+@import 'reset';
+
+
+@font-face {
+  font-family: 'SentyCreek';
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('SentyCreek.ttf') 
+       format('truetype');
+}
+
+
+.correct {
+  background: rgb(216, 214, 248);
+  background: radial-gradient(circle, rgba(196,192,255,1) 0%, rgba(255,255,255,1) 0%, rgba(38, 235, 246, 0.578) 100%);
+}
+
+.incorrect {
+  background: rgb(216, 214, 248);
+  background: radial-gradient(circle, rgba(196,192,255,1) 0%, rgba(255,255,255,1) 0%, rgba(246, 38, 38, 0.578) 100%);
+}
+
+.container {
+  display: grid;
+  margin: 5rem;
+  place-content: center;
+  row-gap: 2rem;
+  
+  
+}
+
+.character {
+  display: grid;
+  width: 200px;
+  height: 200px;
+  border-width: 3px;
+  border-style: solid;
+  justify-items: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: 'SentyCreek';
+  
+}
+
+input[type=text] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #c4e3e5;
+	background: rgba(#cee6e3, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #000000;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  
+}
+
